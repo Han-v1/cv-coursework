@@ -1,0 +1,24 @@
+base:
+  notes: ""
+  model_name: "resnet18"
+  batch_size: 64
+  epochs: 100
+  log_path: "./output/"
+  save_frequency: 1
+dataset:
+  type: "ff_c23"
+  train_txt_path: "./datasets/ff_c23/train.txt"
+  val_txt_path: "./datasets/ff_c23/val.txt"
+  num_classes: 2
+  num_workers: 2
+optimizer:
+  type: "Adam"
+  lr: 0.0001
+  momentum: 0.9
+  weight_decay: 0.0001
+scheduler:
+  type: "ExponentialLR"
+  step_size: 1
+  gamma: 0.9
+  T_max: 10
+  last_epoch: -1

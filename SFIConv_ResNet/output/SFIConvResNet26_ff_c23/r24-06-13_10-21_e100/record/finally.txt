@@ -1,0 +1,29 @@
+
+====================CONFIG====================
+base:
+  batch_size: 64
+  epochs: 100
+  log_path: ./output/
+  model_name: SFIConvResNet26
+  notes: ''
+  save_frequency: 1
+dataset:
+  num_classes: 2
+  num_workers: 2
+  train_txt_path: ./datasets/ff_c23/train.txt
+  type: ff_c23
+  val_txt_path: ./datasets/ff_c23/val.txt
+optimizer:
+  lr: 0.0001
+  momentum: 0.9
+  type: Adam
+  weight_decay: 0.0001
+scheduler:
+  T_max: 10
+  gamma: 0.9
+  last_epoch: -1
+  step_size: 1
+  type: ExponentialLR
+====================FLOPs & Params====================
+Computational complexity (FLOPs):  3.1 GMac
+Number of parameters (Params):  13.95 M 
